@@ -10,8 +10,9 @@
   2.Run terraform plan -generate-config-out: You then execute the terraform plan command with the -generate-config-out flag,         specifying the path to a new file where the generated configuration should be written.
   
      terraform plan -generate-config-out=generated_config.tf
-     
-3.Execute the terraform import Command.
+3. copy resource details from config to main.tf and delete the config.tf file
+   
+4 Execute the terraform import Command.
 Use the terraform import command, specifying the Terraform resource address and the unique ID of the existing AWS EC2 instance. The resource address combines the resource type and its local name (e.g., aws_instance.example_instance). 
 
        terraform import aws_instance.example_instance i-0abcdef1234567890
